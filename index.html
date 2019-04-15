@@ -27,6 +27,7 @@
 	<h1>
 		Percentage of persons aged 12 and over with depression, by age and sex: United States, 2009–2012
 	</h1>
+	<p>data collected from Center of Disease Control</p>
 	<div id="container" style= height:"900px", width: "400px">
   <canvas id="canvas"></canvas>
 </div>
@@ -48,22 +49,22 @@ var barChartData = {
   datasets: [
     {
       label: "Total",
-      backgroundColor: "lightgray",
-      borderColor: "red",
+      backgroundColor: "black",
+      borderColor: "green",
       borderWidth: 1,
       data: [7.6, 5.7, 7.4, 9.8, 5.4]
     },
     {
       label: "Male",
-      backgroundColor: "black",
+      backgroundColor: "gray",
       borderColor: "blue",
       borderWidth: 1,
       data: [5.6, 4.0, 5.8, 7.2, 3.4 ]
     },
     {
       label: "Female",
-      backgroundColor: "gray",
-      borderColor: "green",
+      backgroundColor: "lightgray",
+      borderColor: "orange",
       borderWidth: 1,
       data: [9.5,7.4,9.3,12.3,7.1]
     }
@@ -77,7 +78,7 @@ var chartOptions = {
     position: "top"
   },
   title: {
-    display: true,
+    display: false,
     text: "Chart.js Bar Chart"
   },
   scales: {
