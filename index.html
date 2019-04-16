@@ -25,7 +25,7 @@
 
 <div>
 	<h1>
-		Percentage of persons aged 12 and over with depression, by age and sex: United States, 2009–2012
+		Men Seeking Mental Health Treatment & Men Prescribed Medication for Mental Health in the U.S. 2014-2017
 	</h1>
 	<p>data collected from Center of Disease Control</p>
 	<div id="container" style= height:"900px", width: "400px">
@@ -37,36 +37,29 @@
 
 <script>
 
-var barChartData = {
+var lineChartData = {
   labels: [
-    "All ages",
-    "12-17",
-    "18-39",
-    "40-59",
-    "60 and over"
-
+    "2014",
+    "2015",
+    "2016",
+    "2017"
   ],
+
   datasets: [
+
     {
-      label: "Total",
-      backgroundColor: "black",
-      borderColor: "green",
+      label: "Prescribed Medication",
+      backgroundColor: "darkgray",
+      borderColor: "darkgray",
       borderWidth: 1,
-      data: [7.6, 5.7, 7.4, 9.8, 5.4]
+      data: [9951, 9580, 9357,9812]
     },
     {
-      label: "Male",
-      backgroundColor: "gray",
-      borderColor: "blue",
-      borderWidth: 1,
-      data: [5.6, 4.0, 5.8, 7.2, 3.4 ]
-    },
-    {
-      label: "Female",
-      backgroundColor: "lightgray",
+      label: "Received Treatment",
+      backgroundColor: "orange",
       borderColor: "orange",
       borderWidth: 1,
-      data: [9.5,7.4,9.3,12.3,7.1]
+      data: [12190,11945, 11632,12462]
     }
 
   ]
@@ -75,11 +68,15 @@ var barChartData = {
 var chartOptions = {
   responsive: true,
   legend: {
-    position: "top"
+    position: "top",
+		labels: {
+			fontColor:'' ,
+			fontFamily:'Nunito Sans'
+		}
   },
   title: {
     display: false,
-    text: "Chart.js Bar Chart"
+    text: "Line Chart"
   },
   scales: {
     yAxes: [{
@@ -92,9 +89,9 @@ var chartOptions = {
 
 window.onload = function() {
   var ctx = document.getElementById("canvas").getContext("2d");
-  window.myBar = new Chart(ctx, {
-    type: "bar",
-    data: barChartData,
+  window.myLine = new Chart(ctx, {
+    type: "line",
+    data: lineChartData,
     options: chartOptions
   });
 };
