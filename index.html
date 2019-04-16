@@ -27,7 +27,7 @@
 	<h1>
 		Men Seeking Mental Health Treatment & Men Prescribed Medication for Mental Health in the U.S. 2014-2017
 	</h1>
-	<p>data collected from Center of Disease Control</p>
+	<p>data collected from ?</p>
 	<div id="container" style= height:"900px", width: "400px">
   <canvas id="canvas"></canvas>
 </div>
@@ -49,16 +49,18 @@ var lineChartData = {
 
     {
       label: "Prescribed Medication",
-      backgroundColor: "darkgray",
-      borderColor: "darkgray",
+      backgroundColor: "orange",
+      borderColor: "orange",
       borderWidth: 1,
+			pointHoverRadius: 6,
       data: [9951, 9580, 9357,9812]
     },
     {
       label: "Received Treatment",
-      backgroundColor: "orange",
-      borderColor: "orange",
+      backgroundColor: "darkgray",
+      borderColor: "darkgray",
       borderWidth: 1,
+			pointHoverRadius: 6,
       data: [12190,11945, 11632,12462]
     }
 
@@ -69,8 +71,9 @@ var chartOptions = {
   responsive: true,
   legend: {
     position: "top",
+		fontColor: "#3d3d3d",
 		labels: {
-			fontColor:'' ,
+			fontColor:'#3d3d3d' ,
 			fontFamily:'Nunito Sans'
 		}
   },
