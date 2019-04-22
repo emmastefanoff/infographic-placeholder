@@ -25,11 +25,16 @@
 
 <div>
 	<h1>
-		Percentage of persons aged 12 and over with depression, by age and sex: United States, 2009–2012
+		Leading Cause of Death 2015 - Males
 	</h1>
+	<h5>
+		in percentage of US population
+	</h5>
+	</div>
 	<div id="container" style= height:"900px", width: "400px">
   <canvas id="canvas"></canvas>
 </div>
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
@@ -38,35 +43,34 @@
 
 var barChartData = {
   labels: [
-    "All ages",
-    "12-17",
-    "18-39",
-    "40-59",
-    "60 and over"
+    "age 15-19",
+    "age 20-24",
+    "age 25-35"
+
 
   ],
   datasets: [
     {
-      label: "Total",
+      label: "unintentional injuries",
       backgroundColor: "lightgray",
-      borderColor: "red",
+      borderColor: "lightgray",
       borderWidth: 1,
-      data: [7.6, 5.7, 7.4, 9.8, 5.4]
+      data: [38.1, 42.3, 41.0]
     },
     {
-      label: "Male",
+      label: "suicide",
       backgroundColor: "black",
-      borderColor: "blue",
+      borderColor: "black",
       borderWidth: 1,
-      data: [5.6, 4.0, 5.8, 7.2, 3.4 ]
+      data: [21.4, 18.6, 15.4 ]
     },
-    {
-      label: "Female",
-      backgroundColor: "gray",
-      borderColor: "green",
-      borderWidth: 1,
-      data: [9.5,7.4,9.3,12.3,7.1]
-    }
+		{
+			label: "homicide",
+			backgroundColor: "gray",
+			borderColor: "gray",
+			borderWidth: 1,
+			data: [19.1, 18.2, 11.5 ]
+		}
 
   ]
 };
@@ -77,8 +81,8 @@ var chartOptions = {
     position: "top"
   },
   title: {
-    display: true,
-    text: "Chart.js Bar Chart"
+    display: false,
+    text: "Leading Cause of Death 2015: Males"
   },
   scales: {
     yAxes: [{
